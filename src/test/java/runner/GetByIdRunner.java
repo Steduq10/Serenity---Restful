@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/getAll.feature"},
+        features = {"src/test/resources/features/getById.feature"},
         glue = {"stepdefinitions.get"}
 )
-public class GetAllBooksRunner {
+public class GetByIdRunner {
 }

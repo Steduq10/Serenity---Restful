@@ -5,11 +5,11 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.rest.interactions.Get;
 
-public class GetAllBooks implements Task {
+public class GetBooks implements Task {
 
     private String resource;
 
-    public GetAllBooks usingTheResource(String resource){
+    public GetBooks usingTheResource(String resource){
         this.resource = resource;
         return this;
     }
@@ -23,7 +23,7 @@ public class GetAllBooks implements Task {
         );
     }
 
-    public static GetAllBooks getAllBooks() {
-        return new GetAllBooks();
+    public static GetBooks getAllBooks() {
+        return new GetBooks();
     }
 }

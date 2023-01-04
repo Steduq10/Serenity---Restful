@@ -11,7 +11,6 @@ import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 import stepdefinitions.SetUp;
-import stepdefinitions.getall.GetAllSteps;
 import tasks.UpdateBook;
 import utils.ContentBody;
 
@@ -39,7 +38,7 @@ public class UpdateForbiddenSteps extends SetUp {
     public void elUsuarioHaceUnaPeticionDeActualizacionDeUnRegistro() {
         try {
             actor.attemptsTo(
-                    UpdateBook.updateBook().usingTheResource(UPDATE)
+                    UpdateBook.updateBook().usingTheResource(ID)
                             .withHeaders(headers)
                             .andBodyRequest(bodyRequest)
             );

@@ -1,4 +1,4 @@
-package stepdefinitions.getall;
+package stepdefinitions.get;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -7,14 +7,13 @@ import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import net.serenitybdd.screenplay.rest.questions.ResponseConsequence;
 import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 import questions.PrettierResponse;
 import stepdefinitions.SetUp;
-import tasks.GetAllBooks;
+import tasks.GetBooks;
 
 import static org.hamcrest.CoreMatchers.containsString;
 
@@ -39,7 +38,7 @@ public class GetAllSteps extends SetUp {
     public void elUsuarioHaceLaPeticionDeObtenerElListadoDeLibrosCompleto() {
         try{
             actor.attemptsTo(
-                    GetAllBooks.getAllBooks().usingTheResource(BASE_PATH)
+                    GetBooks.getAllBooks().usingTheResource(BASE_PATH)
             );
             LOGGER.info("El usuario hace la petición de obtener el listado de libros completo");
         }catch (Exception e){

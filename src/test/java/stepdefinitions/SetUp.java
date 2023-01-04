@@ -16,7 +16,7 @@ public class SetUp {
     protected static final String AUTH= "/auth";
 
 
-    protected static final String UPDATE = "/booking/927";
+    protected static final String ID = "/booking/927";
 
     protected Actor actor;
     protected Map<String, Object> headers = new HashMap<>();

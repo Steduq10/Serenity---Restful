@@ -5,10 +5,10 @@ import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class GetAllBooksResponse implements Question<Book> {
+public class GetBooksResponse implements Question<Book> {
 
-    public static GetAllBooksResponse getAllBooksResponse(){
-        return new GetAllBooksResponse();
+    public static GetBooksResponse getAllBooksResponse(){
+        return new GetBooksResponse();
     }
 
     @Override

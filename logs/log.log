@@ -15,3 +15,9 @@
 [2023-01-04 16:34:00][INFO ] [UpdateForbiddenSteps:30] El usuario no se encuentra registrado
 [2023-01-04 16:34:06][INFO ] [UpdateForbiddenSteps:47] El usuario hace la petición de actualizacion de un registro
 [2023-01-04 16:34:06][INFO ] [UpdateForbiddenSteps:64] El código de respuesta es FORBIDDEN(403)
+[2023-01-04 18:06:45][INFO ] [GetAllSteps:30] El usuario quiere consultar la informacion de un libro por su id
+[2023-01-04 18:06:51][INFO ] [GetAllSteps:46] El usuario hace la peticion de obtener el libro con id: /booking/927
+[2023-01-04 18:06:51][INFO ] [GetAllSteps:83] El usuario obtiene la informacion requerida y el codigo de respuesta esperado
+[2023-01-04 18:07:44][INFO ] [GetAllSteps:31] El usuario quiere consultar la informacion de un libro por su id
+[2023-01-04 18:07:49][INFO ] [GetAllSteps:47] El usuario hace la peticion de obtener el libro con id: /booking/927
+[2023-01-04 18:07:49][INFO ] [GetAllSteps:85] El usuario obtiene la informacion requerida y el codigo de respuesta esperado
