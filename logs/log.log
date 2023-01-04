@@ -12,3 +12,6 @@
 [2023-01-04 15:30:46][INFO ] [GetAllSteps:44] El usuario hace la petición de obtener el listado de libros completo
 [2023-01-04 15:30:47][INFO ] [GetAllSteps:61] el usuario obtiene el listado de libros completo
 [2023-01-04 15:30:47][INFO ] [GetAllSteps:78] El codigo de respuesta es OK(200)
+[2023-01-04 16:34:00][INFO ] [UpdateForbiddenSteps:30] El usuario no se encuentra registrado
+[2023-01-04 16:34:06][INFO ] [UpdateForbiddenSteps:47] El usuario hace la petición de actualizacion de un registro
+[2023-01-04 16:34:06][INFO ] [UpdateForbiddenSteps:64] El código de respuesta es FORBIDDEN(403)

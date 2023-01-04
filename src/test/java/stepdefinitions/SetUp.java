@@ -21,6 +21,8 @@ public class SetUp {
     protected Actor actor;
     protected Map<String, Object> headers = new HashMap<>();
 
+    protected String bodyRequest;
+
     protected void setUpLog4j2(){
         PropertyConfigurator.configure(USER_DIR.value() + LOG4J_PROPERTIES_FILE_PATH.getValue());
     }
