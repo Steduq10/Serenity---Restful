@@ -1,0 +1,14 @@
+[2023-01-04 15:24:39][INFO ] [GetAllSteps:30] El usuario quiere consultar el listado de libros
+[2023-01-04 15:24:46][INFO ] [GetAllSteps:44] El usuario hace la petición de obtener el listado de libros completo
+[2023-01-04 15:24:47][INFO ] [GetAllSteps:61] el usuario obtiene el listado de libros completo
+[2023-01-04 15:27:09][INFO ] [GetAllSteps:30] El usuario quiere consultar el listado de libros
+[2023-01-04 15:27:17][INFO ] [GetAllSteps:44] El usuario hace la petición de obtener el listado de libros completo
+[2023-01-04 15:27:17][INFO ] [GetAllSteps:61] el usuario obtiene el listado de libros completo
+[2023-01-04 15:28:46][INFO ] [GetAllSteps:30] El usuario quiere consultar el listado de libros
+[2023-01-04 15:28:52][INFO ] [GetAllSteps:44] El usuario hace la petición de obtener el listado de libros completo
+[2023-01-04 15:28:53][INFO ] [GetAllSteps:61] el usuario obtiene el listado de libros completo
+[2023-01-04 15:28:53][INFO ] [GetAllSteps:78] El codigo de respuesta es OK(200)
+[2023-01-04 15:30:41][INFO ] [GetAllSteps:30] El usuario quiere consultar el listado de libros
+[2023-01-04 15:30:46][INFO ] [GetAllSteps:44] El usuario hace la petición de obtener el listado de libros completo
+[2023-01-04 15:30:47][INFO ] [GetAllSteps:61] el usuario obtiene el listado de libros completo
+[2023-01-04 15:30:47][INFO ] [GetAllSteps:78] El codigo de respuesta es OK(200)
