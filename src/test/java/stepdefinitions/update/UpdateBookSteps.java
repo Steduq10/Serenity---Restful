@@ -1,4 +1,4 @@
-package stepdefinitions.get;
+package stepdefinitions.update;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -9,52 +9,73 @@ import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
-import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Assertions;
 import questions.StringResponse;
 import stepdefinitions.SetUp;
-import tasks.GetBooks;
+import tasks.Auth;
+import tasks.UpdateBook;
+import utils.ContentBody;
+import utils.ContentBodyAuth;
 
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 import static org.hamcrest.CoreMatchers.containsString;
 
-public class GetByID extends SetUp {
+public class UpdateBookSteps extends SetUp {
 
-    public static final Logger LOGGER = Logger.getLogger(GetAllSteps.class);
-    @Dado("el usuario quiere consultar la informacion de un libro por su id")
-    public void elUsuarioQuiereConsultarLaInformacionDeUnLibroPorSuId() {
+    public static final Logger LOGGER = Logger.getLogger(UpdateBookSteps.class);
+    @Dado("a que el usuario se encuentra registrado con un perfil con permisos de admin")
+    public void aQueElUsuarioSeEncuentraRegistradoConUnPerfilConPermisosDeAdmin() {
         try {
             setUpLog4j2();
+
             actor = Actor.named("Steven");
             actor.can(CallAnApi.at(BASE_URL));
 
-            LOGGER.info("El usuario quiere consultar la informacion de un libro por su id");
+            headersAuth.put("Content-Type", "application/json");
+            bodyRequestAuth = ContentBodyAuth.JSON_BODY.getValue();
+
+            actor.attemptsTo(
+                    Auth.auth().usingTheResource(AUTH)
+                            .withHeaders(headersAuth)
+                            .andBodyRequest(bodyRequestAuth)
+
+            );
+            String token = LastResponse.received().answeredBy(actor).prettyPrint()
+                    .replace("\"", "").replace("{", "").replace("token: ", "")
+                    .replace(" ", "").replace("\n", "").replace("}","");
+
+
+            headers.put("Content-Type", "application/json");
+            headers.put("Cookie", "token=" + token);
+            bodyRequest = ContentBody.JSON_BODY.getValue();
+
+            LOGGER.info("El usuario se encuentra registrado");
         }catch (Exception e){
             LOGGER.error(e.getMessage(), e);
             Assertions.fail(e.getMessage());
         }
-
     }
 
-    @Cuando("el usuario hace la peticion de obtener la informacion del libro por su id")
-    public void elUsuarioHaceLaPeticionDeObtenerLaInformacionDelLibroPorSuId() {
-
+    @Cuando("el usuario hace una peticion de actualizacion de un registro de un libro")
+    public void elUsuarioHaceUnaPeticionDeActualizacionDeUnRegistroDeUnLibro() {
         try {
             actor.attemptsTo(
-                   GetBooks.getAllBooks().usingTheResource(ID)
+                    UpdateBook.updateBook().usingTheResource(ID)
+                            .withHeaders(headers)
+                            .andBodyRequest(bodyRequest)
             );
 
-            LOGGER.info("El usuario hace la peticion de obtener el libro con id: " + ID);
+            LOGGER.info("El usuario hace la petición de actualizacion de un registro");
         }catch (Exception e){
             LOGGER.error(e.getMessage(), e);
             Assertions.fail(e.getMessage());
         }
     }
 
-    @Entonces("el usuario deberia obtener la informacion correspondiente al id del libro buscado y un codigo de respuesta {int}")
-    public void elUsuarioDeberiaObtenerLaInformacionCorrespondienteAlIdDelLibroBuscadoYUnCodigoDeRespuesta(int arg0) {
-
+    @Entonces("el usuario debera ver un codigo de respuesta {int} y la informacion del libro actualizado")
+    public void elUsuarioDeberaVerUnCodigoDeRespuestaYLaInformacionDelLibroActualizado(int statusCode) {
         try {
+            statusCode = HttpStatus.SC_OK;
             LastResponse.received().answeredBy(actor).prettyPrint();
             String response = StringResponse.stringResponse().answeredBy(actor);
 
@@ -77,12 +98,12 @@ public class GetByID extends SetUp {
                     GivenWhenThen.seeThat("La respuesta incluye additionalneeds",
                             responseRequest -> response, containsString("additionalneeds")
                     ),
-                    seeThatResponse("El código de respuesta debe ser" + HttpStatus.SC_OK,
+                    seeThatResponse("El código de respuesta debe ser" + statusCode,
                             validatableResponse -> validatableResponse.statusCode(HttpStatus.SC_OK)
                     )
 
             );
-            LOGGER.info("El usuario obtiene la informacion requerida y el codigo de respuesta esperado");
+            LOGGER.info("El usuario obtiene la informacion actualizada y el codigo de respuesta esperado");
         }catch (Exception e){
             LOGGER.error(e.getMessage(), e);
             Assertions.fail(e.getMessage());

@@ -23,6 +23,12 @@ public class SetUp {
 
     protected String bodyRequest;
 
+    protected Map<String, Object> headersAuth = new HashMap<>();
+
+    protected String bodyRequestAuth;
+
+
+
     protected void setUpLog4j2(){
         PropertyConfigurator.configure(USER_DIR.value() + LOG4J_PROPERTIES_FILE_PATH.getValue());
     }

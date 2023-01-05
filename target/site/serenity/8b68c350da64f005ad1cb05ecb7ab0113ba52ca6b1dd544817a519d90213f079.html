@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Consultar informacion libros por id</title>
+    <title>Actualizar registro de un libro</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -126,8 +126,8 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > <a href="00a9af602a92d298e2a8666ec29ec695f200666478b4dffde0dc551d34805e1a.html">Obtener Informacion De Un Libro Por Su ID</a>
-        > Consultar informacion libros por id
+            > <a href="15f8568b2ff6e12e6a65340195f46c253b32815100813e1ce14c0bb3641269f4.html">Update Booking</a>
+        > Actualizar registro de un libro
         </span>
         </div>
         <div class="rightbg"></div>
@@ -163,7 +163,7 @@
                                 <div>
                                     <h3 class="discreet-story-header">
                                         <i class="fa fa-2x fa-comments-o"></i>
-                                        <span class="story-header-title">Obtener Informacion De Un Libro Por Su ID </span>
+                                        <span class="story-header-title">Update Booking </span>
                                     </h3>
 
                                 </div>
@@ -181,7 +181,7 @@
                             <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
                                 <span class="success-color">
-                                    Consultar informacion libros por id
+                                    Actualizar registro de un libro
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -264,24 +264,159 @@
 
                         <td width="50" class="step-icon">
                             <a name="0"></a>
-                                <span style="margin-left: 20px;"
-                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                </span>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block;">
                                     <span class="top-level-step">
-                                                Dado el usuario quiere consultar la informacion de un libro por su id
+                                                Dado a que el usuario se encuentra registrado con un perfil con permisos de admin
                                         </span>
+                                </a>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.01s</span></td>
+                        <td width="100"><span class="top-level-step">0.69s</span></td>
                     </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0-0 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Steven auth
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.66s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="0-0-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0-0-0 success-icon"
+                                       style="margin-left: 60px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Steven executes a POST on the resource /auth
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.64s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0-0-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="110" class="step-icon">
+                            <a name="0-0-0-0"></a>
+                                <span style="margin-left: 80px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                POST https://restful-booker.herokuapp.com/auth
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-4">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: application/json</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                        <h4>Content Body</h4>
+                                        <pre>{<br>    &quot;username&quot;: &quot;admin&quot;,<br>    &quot;password&quot;: &quot;password123&quot;<br>}</pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Server: Cowboy<br>Connection: keep-alive<br>X-Powered-By: Express<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 27<br>Etag: W/&quot;1b-sbHjRU7ZJO4umWIKqe8qtIP1CKo&quot;<br>Date: Thu, 05 Jan 2023 00:19:25 GMT<br>Via: 1.1 vegur</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>{<br>    &quot;token&quot;: &quot;c5c5143012c7ea4&quot;<br>}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
                     <tr class="test-SUCCESS">
 
                         <td width="50" class="step-icon">
@@ -298,7 +433,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Cuando el usuario hace la peticion de obtener la informacion del libro por su id
+                                                Cuando el usuario hace una peticion de actualizacion de un registro de un libro
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -307,7 +442,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.67s</span></td>
+                        <td width="100"><span class="top-level-step">0.63s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -329,7 +464,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Steven get books
+                                                Steven update book
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -338,7 +473,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.66s</span></td>
+                        <td width="100"><span class="nested-step">0.62s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -360,7 +495,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Steven executes a GET on the resource /booking/927
+                                                Steven executes a PUT on the resource /booking/927
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -369,7 +504,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.66s</span></td>
+                        <td width="100"><span class="nested-step">0.61s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -387,32 +522,32 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                GET https://restful-booker.herokuapp.com/booking/927
+                                                PUT https://restful-booker.herokuapp.com/booking/927
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
                     <span>
                         <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#restModal-REST-5">
+                                data-target="#restModal-REST-8">
                             REST Query
                         </button>
                     </span>
                     <!-- Modal -->
                     <div class="rest-query-details">
-                        <div class="collapse multi-collapse" id="restModal-REST-5">
+                        <div class="collapse multi-collapse" id="restModal-REST-8">
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
                                         <p>Status code: 200</p>
                                         <p>Content Type: application/json</p>
                                         <h4>Request Headers</h4>
-                                        <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                        <pre>Cookie=token=c5c5143012c7ea4<br>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
                                         <h4>Content Body</h4>
-                                        <pre></pre>
+                                        <pre>{<br>    &quot;firstname&quot;: &quot;Yuval&quot;,<br>    &quot;lastname&quot;: &quot;Harari&quot;,<br>    &quot;totalprice&quot;: 6000,<br>    &quot;depositpaid&quot;: true,<br>    &quot;bookingdates&quot;: {<br>        &quot;checkin&quot;: &quot;2018-01-01&quot;,<br>        &quot;checkout&quot;: &quot;2021-01-01&quot;<br>    },<br>    &quot;additionalneeds&quot;: &quot;Novel&quot;<br>}</pre>
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Server: Cowboy<br>Connection: keep-alive<br>X-Powered-By: Express<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 168<br>Etag: W/&quot;a8-k3IyR4KqS5RhV2JqmnM/eHdjSPA&quot;<br>Date: Thu, 05 Jan 2023 00:19:27 GMT<br>Via: 1.1 vegur</pre>
+                                        <pre>Server: Cowboy<br>Connection: keep-alive<br>X-Powered-By: Express<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 168<br>Etag: W/&quot;a8-k3IyR4KqS5RhV2JqmnM/eHdjSPA&quot;<br>Date: Thu, 05 Jan 2023 00:19:26 GMT<br>Via: 1.1 vegur</pre>
                                     <h4>Response Body</h4>
                                         <pre>{<br>    &quot;firstname&quot;: &quot;Yuval&quot;,<br>    &quot;lastname&quot;: &quot;Harari&quot;,<br>    &quot;totalprice&quot;: 6000,<br>    &quot;depositpaid&quot;: true,<br>    &quot;bookingdates&quot;: {<br>        &quot;checkin&quot;: &quot;2018-01-01&quot;,<br>        &quot;checkout&quot;: &quot;2021-01-01&quot;<br>    },<br>    &quot;additionalneeds&quot;: &quot;Novel&quot;<br>}</pre>
                                 </div>
@@ -455,7 +590,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Entonces el usuario deberia obtener la informacion correspondiente al id del libro buscado y un codigo de respuesta 200
+                                                Entonces el usuario debera ver un codigo de respuesta 200 y la informacion del libro actualizado
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -631,7 +766,7 @@
                 <tr class="test-SUCCESS">
                         <td colspan="2"></td>
                     <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>0.72s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>1.36s</em></span></td>
                 </tr>
 
             </table>
